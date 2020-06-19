@@ -1,0 +1,17 @@
+dist: trusty
+warnings_are_errors: false
+language: python
+python:
+    - "3.6"
+services:
+  - docker
+script:
+  - python --version
+  - python -m pip3 install --upgrade pip3
+  - pip3 install --upgrade robotframework
+  - pip3 install --upgrade  requests
+  - pip3 install --upgrade  robotframework-requests
+  - pip3 install --upgrade  robotframework
+  - docker-compose up -d
+  - sleep 20
+  - robot -d results Tests
