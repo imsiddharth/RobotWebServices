@@ -11,6 +11,5 @@ script:
   - pip3 install --upgrade  requests
   - pip3 install --upgrade  robotframework-requests
   - pip3 install --upgrade  robotframework
-  - docker-compose up -d
   - sleep 20
   - robot -d results Tests
