@@ -1,3 +1,8 @@
+"""
+have the hardcoded user value
+"""
+
+"""
 *** Settings ***
 
 Library  RequestsLibrary
@@ -30,5 +35,5 @@ Customer Registration
 
     ${content_type_value}=  get from dictionary  ${response.headers}  content-type
     should be equal  ${content_type_value}  application/json
-
+"""
 
